@@ -1,7 +1,7 @@
 pkgbase = fabric-server
 	pkgdesc = Minecraft Fabric server unit files, script and jar
-	pkgver = 1.20.2_0.11.2_0.14.22
-	pkgrel = 1
+	pkgver = 1.20.4_1.0.0_0.15.7
+	pkgrel = 0
 	url = https://fabricmc.net
 	install = fabric-server.install
 	arch = any
@@ -14,12 +14,12 @@ pkgbase = fabric-server
 	depends = sed
 	optdepends = tar: required in order to create world backups
 	optdepends = netcat: required in order to suspend an idle server
-	provides = fabric-server=1.20.2_0.11.2_0.14.22
-	noextract = fabric-1.20.2-0.11.2-0.14.22.jar
+	provides = fabric-server=1.20.4_1.0.0_0.15.7
+	noextract = fabric-1.20.4-1.0.0-0.15.7.jar
 	backup = etc/conf.d/fabric
-	source = minecraft-server-1.0.2.tar.gz::https://github.com/Edenhofer/minecraft-server/archive/refs/tags/v1.0.2.tar.gz
-	source = fabric-installer-0.11.2.jar::https://maven.fabricmc.net/net/fabricmc/fabric-installer/0.11.2/fabric-installer-0.11.2.jar
-	sha512sums = 11d708d511b63e5541bcc1dbcaf29abbf7cb9583b1d313028770a39b26b41d48dcba023f7e1d6fe30f3c093d20e10a43363011edd432e5785a4580e5c5f852a6
-	sha512sums = f15e0f9b10631de7d5f82e46c1d587faf4a73605eeb1e8bf21dd66b0261524cb08aee25224beaedd9255685db1ae7e00f4751936de00fbbd48998ffe531641f6
+	source = minecraft-server-1.0.4.tar.gz::https://github.com/Edenhofer/minecraft-server/archive/refs/tags/v1.0.4.tar.gz
+	source = fabric-installer-1.0.0.jar::https://maven.fabricmc.net/net/fabricmc/fabric-installer/1.0.0/fabric-installer-1.0.0.jar
+	sha512sums = dd4d68ca061c97a1e3cb5c0bb68439f7d8d45b15092344f3c4dbd4f7f39fef433d566670ad440970061007d93055183b570c7bf98f09c111ecdf8ab0f208f556
+	sha512sums = 4436abb017554703ccb070620a9a39b33ccd380d8d640c88f8d3f5b434ec73bf95c3dbcc9824243dafe2f3bb19fc0f9b9a5f27c2896f8162838f297b77b581d4
 
 pkgname = fabric-server

@@ -10,8 +10,8 @@
 ## Contributor: Philip Abernethy <chais.z3r0@gmail.com>
 ## Contributor: sowieso <sowieso@dukun.de>
 
-_ver="1.20.2_0.11.2_0.14.22-1"
-_minecraft_ver_latest="1.20.2"
+_ver="1.20.4_1.0.0_0.15.7-0"
+_minecraft_ver_latest="1.20.4"
 
 IFS="-" read -ra _ver_temp <<< "$_ver"
 IFS="_" read -ra _pkgver_temp <<< "${_ver_temp[0]}"
@@ -25,7 +25,7 @@ _fabric_ver=${_pkgver_temp[1]}
 # the version of the loader to install
 _fabric_loader_ver=${_pkgver_temp[2]}
 
-_mng_ver=1.0.2
+_mng_ver=1.0.4
 
 _pkgver=${_ver_temp[0]//_/-}
 
@@ -53,8 +53,8 @@ install="fabric-server.install"
 source=("minecraft-server-${_mng_ver}.tar.gz"::"https://github.com/Edenhofer/minecraft-server/archive/refs/tags/v${_mng_ver}.tar.gz"
 		"fabric-installer-${_fabric_ver}.jar"::"https://maven.fabricmc.net/net/fabricmc/fabric-installer/${_fabric_ver}/fabric-installer-${_fabric_ver}.jar")
 noextract=("fabric-${_pkgver}.jar")
-sha512sums=('11d708d511b63e5541bcc1dbcaf29abbf7cb9583b1d313028770a39b26b41d48dcba023f7e1d6fe30f3c093d20e10a43363011edd432e5785a4580e5c5f852a6'
-            'f15e0f9b10631de7d5f82e46c1d587faf4a73605eeb1e8bf21dd66b0261524cb08aee25224beaedd9255685db1ae7e00f4751936de00fbbd48998ffe531641f6')
+sha512sums=('dd4d68ca061c97a1e3cb5c0bb68439f7d8d45b15092344f3c4dbd4f7f39fef433d566670ad440970061007d93055183b570c7bf98f09c111ecdf8ab0f208f556'
+            '4436abb017554703ccb070620a9a39b33ccd380d8d640c88f8d3f5b434ec73bf95c3dbcc9824243dafe2f3bb19fc0f9b9a5f27c2896f8162838f297b77b581d4')
 
 prepare() {
 	java -Duser.home="${srcdir}" -jar "fabric-installer-${_fabric_ver}.jar" server -mcversion ${_minecraft_ver} -downloadMinecraft -loader ${_fabric_loader_ver}
