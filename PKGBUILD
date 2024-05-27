@@ -54,7 +54,7 @@ source=("minecraft-server-${_mng_ver}.tar.gz"::"https://github.com/Edenhofer/min
 		"fabric-installer-${_fabric_ver}.jar"::"https://maven.fabricmc.net/net/fabricmc/fabric-installer/${_fabric_ver}/fabric-installer-${_fabric_ver}.jar")
 noextract=("fabric-${_pkgver}.jar")
 sha512sums=('dd4d68ca061c97a1e3cb5c0bb68439f7d8d45b15092344f3c4dbd4f7f39fef433d566670ad440970061007d93055183b570c7bf98f09c111ecdf8ab0f208f556'
-            '4436abb017554703ccb070620a9a39b33ccd380d8d640c88f8d3f5b434ec73bf95c3dbcc9824243dafe2f3bb19fc0f9b9a5f27c2896f8162838f297b77b581d4')
+            '6e77702af63d9eb6e83adb01aa96a6e057811f524a7787ae48519cd85352f142c30a35f9d9c7794164726eb11e12ce664da6c3a40c8ada3e0294063f38f4636b')
 
 prepare() {
 	java -Duser.home="${srcdir}" -jar "fabric-installer-${_fabric_ver}.jar" server -mcversion ${_minecraft_ver} -downloadMinecraft -loader ${_fabric_loader_ver}
