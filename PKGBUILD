@@ -10,7 +10,7 @@
 ## Contributor: Philip Abernethy <chais.z3r0@gmail.com>
 ## Contributor: sowieso <sowieso@dukun.de>
 
-_ver="1.20.4_1.0.0_0.15.7-0"
+_ver="1.20.4_1.0.1_0.15.11-0"
 _minecraft_ver_latest="1.20.4"
 
 IFS="-" read -ra _ver_temp <<< "$_ver"
@@ -99,7 +99,7 @@ package() {
 	install -Dm644 "server.jar" "${_server_root}/server.jar"
 
 	# install the libraries subfolder
-	# 1 create the emptyfolder structure 
+	# 1 create the emptyfolder structure
 	install -dm755 "libraries" "${_server_root}/libraries"
 	for d in $(find "libraries" -type d);do
 		install -d --mode 755 "$d" "${_server_root}/${d}";
